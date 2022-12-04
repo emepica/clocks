@@ -49,7 +49,7 @@ select{
     margin-top:20px;
     text-align: right;
 }
-.time .small{
+.time small{
     display: inline;
     font-size: 24px;
 }
