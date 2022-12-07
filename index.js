@@ -1,4 +1,4 @@
-function upadteTime(){
+function updateTime(){
 //BXL
 
 let bxlElement = document.querySelector("#bxl");
@@ -23,6 +23,13 @@ bglTimeElement.innerHTML = bglTime.format("hh:M:ss [<small>]A[</small>]");
 function updateCity (event){
     let cityTimezone = event.target.value;
     let cityName = event.target.options[event.target.selectedIndex].text;
+    clearInterval(updateTime());
+    updateCityInterval(cityTimezone, cityName);
+    interval = setInterval(() => {
+      updateCityInterval(cityTimezone, cityName);
+    }, 1000);
+}
+function updateCityInterval(cityTimezone, cityName) {
     if (cityTimezone==="current"){
         cityTimezone= moment.tz.guess();
         cityName = cityTimezone.replace("_", " ").split("/")[1];}
@@ -30,7 +37,7 @@ function updateCity (event){
     let citiesElement = document.querySelector("#cities");
     
     if (cityTimezone.length >0){
-        citiesElement.innerHTML =`<div class="city" id="lln">
+        citiesElement.innerHTML =`<div class="city" id="bxl">
         <div>
         <p>Time zone : ${cityTimezone}</p>
         <h2>${cityName}</h2>
@@ -49,8 +56,9 @@ function updateCity (event){
 }
 
 
-upadteTime();
-setInterval(upadteTime,1000);
+let interval;
+updateTime();
+interval = setInterval(updateTime, 1000);
 
 let selectedCityElement = document.querySelector("#selectedCity");
 selectedCityElement.addEventListener("change",updateCity);
