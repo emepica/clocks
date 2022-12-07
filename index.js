@@ -1,23 +1,23 @@
 function upadteTime(){
-//LLN
+//BXL
 
-let llnElement = document.querySelector("#lln");
-let llnDateElement = llnElement.querySelector(".date");
-let llnTimeElement = llnElement.querySelector(".time");
-let llnTime = moment().tz("Europe/Brussels");
+let bxlElement = document.querySelector("#bxl");
+let bxlDateElement = bxlElement.querySelector(".date");
+let bxlTimeElement = bxlElement.querySelector(".time");
+let bxlTime = moment().tz("Europe/Brussels");
 
-llnDateElement.innerHTML = llnTime.format("dddd, MMMM Do, YYYY");
-llnTimeElement.innerHTML = llnTime.format("hh:M:s [<small>]A[</small>]");
+bxlDateElement.innerHTML = bxlTime.format("dddd, MMMM Do, YYYY");
+bxlTimeElement.innerHTML = bxlTime.format("hh:M:ss [<small>]A[</small>]");
 
-//Bergen 
+//Bengaluru 
 
-let bergenElement = document.querySelector("#bergen");
-let bergenDateElement = bergenElement.querySelector(".date");
-let bergenTimeElement = bergenElement.querySelector(".time");
-let bergenTime = moment().tz("Europe/Oslo");
+let bglElement = document.querySelector("#bgl");
+let bglDateElement = bglElement.querySelector(".date");
+let bglTimeElement = bglElement.querySelector(".time");
+let bglTime = moment().tz("Asia/Calcutta");
 
-bergenDateElement.innerHTML = bergenTime.format("dddd, MMMM Do, YYYY");
-bergenTimeElement.innerHTML = bergenTime.format("hh:M:s [<small>]A[</small>]");
+bglDateElement.innerHTML = bglTime.format("dddd, MMMM Do, YYYY");
+bglTimeElement.innerHTML = bglTime.format("hh:M:ss [<small>]A[</small>]");
 }
 
 function updateCity (event){
@@ -37,8 +37,10 @@ function updateCity (event){
         <div class="date">${cityTime.format("dddd, MMMM Do, YYYY")}</div>
         </div>
 
-        <div class="time-city">${cityTime.format("hh:M:s [<small>]A[</small>]")}</div>
+        <div class="time-city">${cityTime.format("hh:M:ss [<small>]A[</small>]")}</div>
+       
     </div>
+    <a href="index.html" class="city">← Back </a>
     `;
     } 
     else {

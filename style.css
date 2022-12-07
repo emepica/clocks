@@ -1,8 +1,9 @@
 body{
     margin: 0 auto;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: thistle;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(90deg, rgb(0%, 2%, 3%), rgb(2%, 31%, 45%));
+    color: white;
 
 }
 .container{
@@ -10,7 +11,7 @@ body{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
@@ -18,14 +19,25 @@ body{
 
 h1{
     font-size: 48px;
+    margin-bottom: 0px;
 }
 h2{
+    margin-top: 15px;
     margin-bottom: 5px;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+h3{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size:16px;
+    font-style: light;
 }
 p{
     margin:0;
     margin-bottom: -10px;
-    color: rgba(0,0,0,0.4);
+    color: rgba(255,255,255,0.4);
     font-size: 12px;
 }
 select{
@@ -36,14 +48,23 @@ select{
     border-radius: 8px;
     margin-bottom: 20px;
 }
-
+a{
+    color: rgb(17%, 52%, 63%);
+    text-decoration: none;
+}
+a:hover{
+    color:rgb(17%, 52%, 63%);
+    text-decoration: underline;
+}
 .city{
     display: flex;
     text-align: left;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px dashed rgba(0,0,0,0.2);
 }
+
 .city:last-child{
     border:none;
 }
@@ -58,4 +79,12 @@ select{
 .time small{
     display: inline;
     font-size: 24px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(17%, 52%, 63%);
 }

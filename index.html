@@ -7,42 +7,49 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data-1970-2030.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>Clocks</title>
 </head>
 <body>
     <div class="container">
     <h1>Clocks</h1>
-
+    <h3>Time flies!</h3>
+    
     <select id="selectedCity">
         <option value="">Select a place</option>
-        <option value="current">Current location</option>
-        <option value="Europe/Brussels">Louvain-La-Neuve</option>
-        <option value="Europe/Oslo">Bergen</option>
-        <option value="America/Bogota">Cali</option>
-        <option value="Europe/Madrid">Valencia</option>
-        <option value="Europe/Brussels">Brussels</option>
-        <option value="Asia/Calcutta">Bangalore</option>
+        <option value="current">📍 Current location</option>
+        <option value="Europe/Brussels">LLN 🇧🇪</option>
+        <option value="Europe/Oslo">Bergen 🇳🇴</option>
+        <option value="America/Bogota">Cali 🇨🇴</option>
+        <option value="Europe/Madrid">Valencia 🇪🇸</option>
+        <option value="Europe/Brussels">Brussels 🇧🇪</option>
+        <option value="Asia/Calcutta">Bangalore 🇮🇳</option>
     </select>
-
+    
+    
     <div id="cities">
-    <div class="city" id="lln">
+        <div class="intro">Home in Belgium, Om in India</div>
+    <div class="city" id="bxl">
         <div>
-        <h2>Louvain-La-Neuve</h2>
-        <div class="date"></div>
-        </div>
-
-        <div class="time"></div>
-    </div>
-
-
-    <div class="city" id="bergen">
-        <div>
-        <h2>Bergen</h2>
+        <h2>Brussels 🇧🇪</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
     </div>
+
+    
+    <div class="city" id="bgl">
+        <div>
+        <h2>Bengaluru 🇮🇳</h2>
+        <div class="date"></div>
+        </div>
+        <div class="time"></div>
     </div>
+    
+    </div>
+
 
     </div>
 
