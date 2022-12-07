@@ -7,7 +7,7 @@ let bxlTimeElement = bxlElement.querySelector(".time");
 let bxlTime = moment().tz("Europe/Brussels");
 
 bxlDateElement.innerHTML = bxlTime.format("dddd, MMMM Do, YYYY");
-bxlTimeElement.innerHTML = bxlTime.format("hh:M:ss [<small>]A[</small>]");
+bxlTimeElement.innerHTML = bxlTime.format("hh:mm:ss [<small>]A[</small>]");
 
 //Bengaluru 
 
@@ -17,7 +17,7 @@ let bglTimeElement = bglElement.querySelector(".time");
 let bglTime = moment().tz("Asia/Calcutta");
 
 bglDateElement.innerHTML = bglTime.format("dddd, MMMM Do, YYYY");
-bglTimeElement.innerHTML = bglTime.format("hh:M:ss [<small>]A[</small>]");
+bglTimeElement.innerHTML = bglTime.format("hh:mm:ss [<small>]A[</small>]");
 }
 
 function updateCity (event){
@@ -44,7 +44,7 @@ function updateCityInterval(cityTimezone, cityName) {
         <div class="date">${cityTime.format("dddd, MMMM Do, YYYY")}</div>
         </div>
 
-        <div class="time-city">${cityTime.format("hh:M:ss [<small>]A[</small>]")}</div>
+        <div class="time-city">${cityTime.format("hh:mm:ss [<small>]A[</small>]")}</div>
        
     </div>
     <a href="index.html" class="city">← Back </a>
