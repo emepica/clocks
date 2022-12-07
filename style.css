@@ -50,7 +50,7 @@ select{
 .date{
     opacity:0.7;
 }
-.time{
+.time, .time-city{
     font-size: 44px;
     margin-top:20px;
     text-align: right;

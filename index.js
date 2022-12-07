@@ -11,18 +11,21 @@ llnTimeElement.innerHTML = llnTime.format("hh:M:s [<small>]A[</small>]");
 
 //Bergen 
 
-//let bergenElement = document.querySelector("#bergen");
-//let bergenDateElement = bergenElement.querySelector(".date");
-//let bergenTimeElement = bergenElement.querySelector(".time");
-//let bergenTime = moment().tz("Europe/Oslo");
+let bergenElement = document.querySelector("#bergen");
+let bergenDateElement = bergenElement.querySelector(".date");
+let bergenTimeElement = bergenElement.querySelector(".time");
+let bergenTime = moment().tz("Europe/Oslo");
 
-//bergenDateElement.innerHTML = bergenTime.format("dddd, MMMM Do, YYYY");
-//bergenTimeElement.innerHTML = bergenTime.format("hh:M:s [<small>]A[</small>]");
+bergenDateElement.innerHTML = bergenTime.format("dddd, MMMM Do, YYYY");
+bergenTimeElement.innerHTML = bergenTime.format("hh:M:s [<small>]A[</small>]");
 }
 
 function updateCity (event){
     let cityTimezone = event.target.value;
     let cityName = event.target.options[event.target.selectedIndex].text;
+    if (cityTimezone==="current"){
+        cityTimezone= moment.tz.guess();
+        cityName = cityTimezone.replace("_", " ").split("/")[1];}
     let cityTime = moment().tz(cityTimezone);
     let citiesElement = document.querySelector("#cities");
     
@@ -34,15 +37,18 @@ function updateCity (event){
         <div class="date">${cityTime.format("dddd, MMMM Do, YYYY")}</div>
         </div>
 
-        <div class="time">${cityTime.format("hh:M:ss [<small>]A[</small>]")}</div>
+        <div class="time-city">${cityTime.format("hh:M:s [<small>]A[</small>]")}</div>
     </div>
     `;
+    } 
+    else {
+        location.reload();
     }
 }
 
 
 upadteTime();
-//setInterval(upadteTime,1000);
+setInterval(upadteTime,1000);
 
 let selectedCityElement = document.querySelector("#selectedCity");
 selectedCityElement.addEventListener("change",updateCity);
