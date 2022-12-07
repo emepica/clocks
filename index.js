@@ -23,7 +23,7 @@ bglTimeElement.innerHTML = bglTime.format("hh:M:ss [<small>]A[</small>]");
 function updateCity (event){
     let cityTimezone = event.target.value;
     let cityName = event.target.options[event.target.selectedIndex].text;
-    clearInterval(updateTime());
+    clearInterval(interval);
     updateCityInterval(cityTimezone, cityName);
     interval = setInterval(() => {
       updateCityInterval(cityTimezone, cityName);
@@ -37,7 +37,7 @@ function updateCityInterval(cityTimezone, cityName) {
     let citiesElement = document.querySelector("#cities");
     
     if (cityTimezone.length >0){
-        citiesElement.innerHTML =`<div class="city" id="bxl">
+        citiesElement.innerHTML =`<div class="city" id="">
         <div>
         <p>Time zone : ${cityTimezone}</p>
         <h2>${cityName}</h2>
